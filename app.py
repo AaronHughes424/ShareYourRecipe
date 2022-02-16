@@ -22,7 +22,7 @@ mongo = PyMongo(app)
 @app.route("/home")
 def home():
     return render_template("home.html")
-    
+
 
 @app.route("/get_recipes")
 def get_recipes():
