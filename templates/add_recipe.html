@@ -6,6 +6,17 @@
             <h3 class="orange-text text-darken-2 center-align">Add a Recipe!</h3>
             <div class="row">
                 <div class="input-field col s12">
+                    <select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled selected>Choose category</option>
+                        {% for category in categories %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="category_name">Recipe Category</label>
+                  </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
                     <i class="material-icons prefix orange-text">edit</i>
                     <input id="recipe_title" name="recipe_title" minlength="5" maxlength="50"
                      type="text" class="validate" required>
