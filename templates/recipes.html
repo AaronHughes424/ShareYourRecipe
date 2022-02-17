@@ -9,6 +9,7 @@
             <div class="collapsible-body white">
                 <strong><h6>Ingredients</h6>{{ recipes.recipe_ingredients }}</strong>
                 <strong><h6>Method</h6>{{ recipes.recipe_method }}</strong>
+                <p><em>by: {{recipes.created_by}}</em></p>
             </div>
         </li>
         {% endfor %}
