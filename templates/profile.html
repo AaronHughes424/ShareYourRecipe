@@ -4,9 +4,22 @@
     <div class="row">
         <div class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
             <div class="card-panel">
-                <h3 class="center-align orange-text text-darken-2 profile-content">
+                <h4 class="center-align orange-text text-darken-2 profile-content">
                     {{username}}'s Profile
-                </h3>
+                </h4>
+                <ul class="collapsible recipe-list">
+                    {% for recipes in recipes %}
+                    <li>
+                        <div class="collapsible-header white-text orange darken-2 text-shadow">
+                            <i class="material-icons">favorite</i><strong>{{ recipes.recipe_title }} - Click Me!</strong></div>
+                        <div class="collapsible-body white">
+                            <strong><h6>Ingredients</h6>{{ recipes.recipe_ingredients }}</strong>
+                            <strong><h6>Method</h6>{{ recipes.recipe_method }}</strong>
+                            <p><em>by: {{recipes.created_by}}</em></p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
