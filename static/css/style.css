@@ -38,3 +38,16 @@ body {
 .already-registered {
     color: white;
 }
+
+/* Profile Content */
+
+.profile-content {
+    text-transform: capitalize;
+}
+
+/* Recipe Content */
+
+.recipe-list {
+    margin-top: 5%;
+}
+

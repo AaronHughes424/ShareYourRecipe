@@ -1,25 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for recipes in recipes %}
-        {{ recipes.recipe_title }}<br>
-        {{ recipes.recipe_ingredients }}<br>
-        {{ recipes.recipe_method }}<br>
-    {% endfor %}
-
-    <ul class="collapsible">
+    <ul class="collapsible recipe-list">
+        {% for recipes in recipes %}
         <li>
-            <div class="collapsible-header white-text orange darken-2 text-shadow"><i class="material-icons">favorite</i>First</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="collapsible-header white-text orange darken-2 text-shadow">
+                <i class="material-icons">favorite</i><strong>{{ recipes.recipe_title }} - Click Me!</strong></div>
+            <div class="collapsible-body white">
+                <strong><h6>Ingredients</h6>{{ recipes.recipe_ingredients }}</strong>
+                <strong><h6>Method</h6>{{ recipes.recipe_method }}</strong>
+            </div>
         </li>
-        <li>
-            <div class="collapsible-header white-text orange darken-2 text-shadow"><i class="material-icons">favorite</i>Second</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header white-text orange darken-2 text-shadow"><i class="material-icons">favorite</i>Third</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
+        {% endfor %}
     </ul>
 
 {% endblock %}
