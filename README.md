@@ -1,108 +1,238 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# [RecipeShare](https://share-recipe-aaron.herokuapp.com/)
 
-Welcome AaronHughes424,
+## Contents
+1. [Summary](#summary)
+1. [UX](#ux)
+    1. [Strategy](#strategy)
+    1. [Scope](#scope)
+    1. [Structure](#structure)
+    1. [Skeleton](#skeleton)
+    1. [Surface](#surface)
+1. [Features](#features)
+    1. [Existing Features](#existing-features)
+    1. [Features left to implement](#left-to)
+1. [Bugs](#bugs)
+1. [Technologies used](#tech)
+1. [Testing](#testing)
+1. [Deployment](#deployment)
+    1. [Github Pages](#github)
+    1. [heroku](#heroku)
+1. [Credits](#credits)
+    1. [Content](#content)
+    1. [Acknowledgements](#acks)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# <a name="summary"></a> Summary
+This site is a virtual cookbook.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+It provides a database of recipes which can be searched, viewed, added to, removed from and edited.
 
-## Gitpod Reminders
+# <a name="ux"></a> UX
+## <a name="Strategy"></a> Strategy
+### **New site user's goals:**
+* As a new site user, I want to be able to browse and search for recipes 
+* As a new site user, I want to get inspiration for a recipe to make
+* As a new site user, I want to be able to understand the intent of the page
+* As a new site user, I want I want to understand easily how to navigate the page and access the facilities provided
+### **Returning user's goals**
+* As a returning site user, I want to be able to log in
+* As a returning site user, I want to be able to view my recipes
+* As a returning site user, I want to be able to edit and delete my recipes
+* As a returning site user, I want to be able to add new recipes
+### **Site owner'as goals:**
+* As a site owner, I want recipes added via the site to be stored in the correct format in the database
+* As a site owner, I want to be able to see who has added each recipe
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## <a name="scope"></a> Scope
+**Functional requirements:**
+#### For ease of use:
+* Navigation bar which is simple and easy to navigate
+* A search Function
+#### To ensure the database is up to date and editable:
+* Function to add a recipe
+* Function to edit a recipe
+* Function to delete a recipe
+* For the recipes to be only editable by the creator
 
-`python3 -m http.server`
+**Content requirements:**
+#### To ensure the site is visually appealing and to draw the user's eye:
+* A background image which would be pleasing to have througout the site.
+* Clear, crisp colours which do not detract from or make the text unreadable
 
-A blue button should appear to click: _Make Public_,
+### For usability
+* For the time commitment to be clear as this is often a factor in a recipe choice
 
-Another blue button should appear to click: _Open Browser_.
+## <a name="structure"></a> Structure
+**Interaction design:**
+* User friendly interface to ensure usability and to encourage the user to return
+* Responsive and visible links which change on hover to provide user feedback as they navigate the site
+* Ability to exit pop ups so a user is not forced to use the browser navigation tools
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+**Information Architecture:**
+* Navigation bar at the top of the page
+* Responsive navigation bar - adjusting for mobile for ease of use
+* All features appropriate size and responsive for mobile and desktop viewing
+* All information is appropriate and relative to the subject and not misleading or hard to find
 
-A blue button should appear to click: _Make Public_,
+## <a name="skeleton"></a> Skeleton
+Please click the below link to view the wireframe mock up of the website in mobile, tablet and desktop sizing
 
-Another blue button should appear to click: _Open Browser_.
+[Wireframe]()
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## <a name="surface"></a> Surface
+The intention of the website is to be clean, crisp and clear
 
-To log into the Heroku toolbelt CLI:
+* The colour scheme selected is shades of orange and white.
+* The colour scheme was selected as it is clean and crisp. It's bright colours make usability fun.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+# <a name="features"></a> Features
+## <a name="existing-features"></a> Existing Features
+Feature | Details
+--------|--------
+Log in | The user can register and log into their own account with personalised features
+Log out | There is a log out functionality on the page - this is especially important for users of a shared device
+Add recipe | Users can contribute to the site via the add recipe form
+Edit recipe form | Users are able to edit their own recipes. An important note here is that users can only edit their own recipes
+Delete a recipe | Users are abel to delete their own recipes. As above, this can only be done with the user's own recipes
+Search function | The users are able to search the recipe database by ingredient and recipe name.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+# <a name="bugs"></a> Bugs
+Bug | Fix
+--------|--------
 
-------
+* Issue with heroku deployment|When posting the MongoDB URI from the env.py file there was a line break which wouldn't allow heroku to launch app.
 
-## Release History
+# <a name="tech"></a> Technologies Used
+* Materialize - https://materializecss.com/
+* JavaScript
+* www.validator.w3.org
+* http://www.css-validator.org/
+* Git
+* Gitpod
+* GitHub
+* Google Chrome
+* http://www.responsinator.com/
+* Chrome Dev Tools
+* Python
+* Flask
+* MongoDb
+* Heroku
+* Jinja
+* Balsamiq
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+# <a name="testing"></a> Testing
+### **New site user testing:**
+* As a new site user, I want to be able to browse and search for recipes 
+    1. Upon entering the site, users are automatically greeted with the page title and sub heading
+    1. There is a clear call to action to sign up to browse the recipes
+* As a new site user, I want to be able to understand the intent of the page
+    1. Upon entering the page, it is clear the site is designed around food and cooking. 
+* As a new site user, I want I want to understand easily how to navigate the page and access the facilities provided
+    1. The navigation bar has clear and easy to understand links. These links are also dynamic to whether the user is signed in or not so they are only seeing the relevant options
+### **Returning user testing**
+* As a returning site user, I want to be able to log in
+    1. Upon entering the site, there is the option in the nav bar to register and log in
+* As a returning site user, I want to be able to view my recipes
+    1. the user's profile page provides all of the recipes the user has submitted
+* As a returning site user, I want to be able to edit and delete my recipes
+    1. The recipes the user has submitted all show buttons to edit and delete the recipes. This is not visible to other users
+* As a returning site user, I want to be able to add new recipes
+    1. The form to enter a new recipe allows the user to instantly add a recipe to the site in the required format
+### **Site owner testing:**
+* As a site owner, I want recipes added via the site to be stored in the correct format in the database
+    1. The form to add or edit a recipe validates the content to ensure all fields are complete and are in the correct format
+* As a site owner, I want to be able to see who has added each recipe
+    1. When a recipe is submitted, the user's _Id is stored in the database. This shows on the site as the user's username on each recipe
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### **Performance testing:**
+1. Tested website responsiveness using http://www.responsinator.com/
+    1. Results: The website is responsive to all device sizes without any unnecessary x-scroll. 
+1. All HTML pages were tested using https://validator.w3.org/
+    1. Only 2 errors were found where buttons were used inside of an anchor tag.
+1. Tested the CSS using https://jigsaw.w3.org/css-validator/
+    1. No errors were found
+1. Tested the website on the Google Chrome
+    1. Results: The website was responsive and the elements performed in the way they were intended to
+1. Tested the website on the Microsoft Edge browser
+    1. Results: The website was responsive and the elements performed in the way they were intended to
+1. Tested the website on the Firefox browser
+    1. Results: The website was responsive and the elements performed in the way they were intended to
+1. Tested the form validation worked correctly on each of the above browsers
+    1. Results: The form correctly sent when the fields were completed as they should have been and did not when the fields had not been completed
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+# <a name="deployment"></a> Deployment
+## <a name="github"></a> Github Pages
+1. Create a new repository or access an existing repository
+1. Click the green Gitpod button to launch the project in Gitpod
+1. Create an index.html file
+1. Add the file to the staging area using the git add Functional
+1. Commit the file using the git commit function, adding an appropriate commentary
+1. Push the file to GitHub using the git commit and git push functions
+1. Refresh your GitHub repository and click the 'Settings' tab
+1. Scroll to the GitHub Pages section and select a publishing source
+1. Click 'Save'
+1. Click the URL created within the Settings - GitHub Pages section
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+**To clone the repository for local deployment:** 
+1. On the main page of the repository, click the down arrow Code button
+1. Click the download icon under the relevant section to clone with either HTTPS, SSH or GitHub CLI 
+1. In Git Bash, change the current directory to the location you want the directory to be stored
+1. Type git clone and then paste the URL you copied in step 2
+    1. An example for HTTPS: `git clone https://github.com/AaronHughes424/ShareYourRecipe`
+1. Press enter - that's it, your clone has been completed! 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+**To fork the repository:**
+1. Navigate to the main page of the repository you wish to fork
+1. Click the Fork button on the top right hand side of the page
+## <a name="heroku"></a> Heroku
+### How to deploy to Heroku
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+To deploy the app to Heroku from its [GitHub repository](https://github.com/AaronHughes424/ShareYourRecipe), the following steps were taken:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+1. From the GitPod terminal, create **requirements.txt** and **Procfile** using these commands:
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
+```console
+pip3 freeze --local > requirements.txt
+echo web: python app.py > Procfile
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+2. **Push** these files to GitHub
+3. **Log In** to [Heroku](https://id.heroku.com/login)
+4. Select **Create new app** from the dropdown in the Heroku dashboard
+5. Choose a unique name ('recipe-nation') for the app and the location nearest to you
+6. Go to the **Deploy** tab and under **Deployment method** choose GitHub
+7. In **Connect to GitHub** enter your GitHub repository details and once found, click **Connect**
+8. Go to the **Settings** tab and under **Config Vars** choose **Reveal Config Vars**
+9. Enter the following keys and values, which must match those in the env.py file created earlier:
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+|**Key**|**Value**|
+|:-----|:-----|
+|IP|`0.0.0.0`|
+|PORT|`5000`|
+|SECRET_KEY|`<app secret key>`|
+|MONGO_URI|`mongodb+srv://aaronhughes424:Jackson22@recipeshare.ul2rr.mongodb.net/recipe_share?retryWrites=true&w=majority`
+|MONGO_DBNAME|`recipe_nation`|
 
----
+10. Go back to the **Deploy** tab and under **Automatic deploys** choose **Enable Automatic Deploys**
+11. Under **Manual deploy**, select **master** and click **Deploy Branch**
+12. Once the app has finished building, click **Open app** from the header row of the dashboard
 
-Happy coding!
+# <a name="credits"></a> Credits
+## <a name="content"></a> Content
+All of the recipes and images added under the username 'aaronhughes' were sourced from https://www.bbcgoodfood.com
+https://www.bbcgoodfood.com/recipes/shortbread-biscuits
+https://www.bbcgoodfood.com/recipes/yummy-golden-syrup-flapjacks
+https://www.bbcgoodfood.com/recipes/chocolate-fudge-cake
+https://www.bbcgoodfood.com/recipes/new-york-cheesecake
+https://www.bbcgoodfood.com/user/187365/recipe/creamy-garlic-mushrooms
+https://www.bbcgoodfood.com/recipes/beef-stroganoff
+
+The Code Institute:
+
+Providing an indepth walkthrough of User Validation via materialize.css
+
+## <a name="acks"></a> Acknowledgements
+
+* My mentor Antonio Rodriguez who has provided me with guidance and support through the project
+
+* My friends and family who helped to test the site and to add recipes
+    
