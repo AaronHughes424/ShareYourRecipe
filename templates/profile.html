@@ -12,7 +12,15 @@
                     {% for recipes in recipes %}
                     <li>
                         <div class="collapsible-header white-text orange darken-2 text-shadow">
-                            <i class="material-icons">favorite</i><strong>{{ recipes.recipe_title }} - {{ recipes.category_name }}</strong></div>
+                            <div class="col s4">
+                                <i class="material-icons">favorite</i>
+                                <a href="#" class="lime white-text btn-small">Edit</a>
+                                <a href="#" class="red white-text btn-small">Delete</a>
+                            </div>
+                            <div class="col s8">
+                                <strong>{{ recipes.recipe_title }} - {{ recipes.category_name }}</strong>
+                            </div>
+                        </div>
                         <div class="collapsible-body white">
                             <strong><h6>Ingredients</h6>{{ recipes.recipe_ingredients }}</strong>
                             <strong><h6>Method</h6>{{ recipes.recipe_method }}</strong>

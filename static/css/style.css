@@ -45,9 +45,15 @@ body {
     text-transform: capitalize;
 }
 
+.btn-small {
+    margin: 5px;
+}
+
 /* Recipe Content */
 
 .recipe-list {
     margin-top: 5%;
 }
+
+
 
