@@ -3,13 +3,22 @@
 
     <div class="row">
         <div class="col s12 m8 offset-m2 orange-text">
-            <div class="card-panel">
-                <div class="row">
-                    <h3>Welcome To RecipeShare</h3>
-                    <p>RecipeShare is a site where you can log in find new recipes submited by other users
-                        and submit them yourself! Have fun enjoy and share what you know!
-                    </p>
-                </div>                    
+            <div class="card-panel card-content-home">
+                <h3>Welcome To RecipeShare</h3>
+                <p>RecipeShare is a site where you can log in find new recipes submited by other users
+                        and submit them yourself! Have fun, enjoy and share what you know! Click the 
+                        Login or Sign up button below to get started.
+                </p>
+                <a href="{{ url_for('login') }}">
+                    <button type="submit" class="s3 btn-small orange darken-2 text-shadow">
+                    Log In
+                    </button>
+                </a>
+                <a href="{{ url_for('register') }}">
+                    <button type="submit" class="s3 btn-small orange darken-2 text-shadow">
+                    Sign Up
+                    </button>
+                </a>
             </div>
         </div>
     </div>

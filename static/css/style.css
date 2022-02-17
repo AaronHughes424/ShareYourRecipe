@@ -9,3 +9,32 @@ body {
 .flashes h4{
     line-height: 2;
 }
+
+/* Home screen content */
+.card-content-home {
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 35%;
+    padding: 40px 20px;
+}
+
+.card-content-home h3 {
+    text-decoration: underline;
+}
+
+.card-content-home p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Login Content */
+
+.new-here {
+    color: white;
+}
+
+/* Sign Up Content */
+
+.already-registered {
+    color: white;
+}
