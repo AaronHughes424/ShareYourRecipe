@@ -7,18 +7,25 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix orange-text">edit</i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Title</label>
+                    <input id="recipe_title" name="recipe_title" minlength="5" maxlength="50"
+                     type="text" class="validate" required>
+                    <label for="recipe_title">Title</label>
                 </div>
+            </div>
+            <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix orange-text">check_box</i>
-                    <input id="icon_telephone" type="tel" class="validate">
-                    <label for="icon_telephone">Ingredients</label>
+                    <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="5"
+                    maxlength="1000" class="materialize-textarea validate" required></textarea>
+                    <label for="recipe_ingredients">Ingredients</label>
                 </div>
+            </div>
+            <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix orange-text">lightbulb_outline</i>
-                    <input id="icon_telephone" type="tel" class="validate">
-                    <label for="icon_telephone">Method</label>
+                    <textarea id="recipe_method" name="recipe_method" minlength="5"
+                    maxlength="1000" class="materialize-textarea validate" required></textarea>
+                    <label for="recipe_method">Method</label>
                 </div>
             </div>
         </form>
