@@ -24,6 +24,13 @@ def home():
     return render_template("home.html")
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    return render_template("recipes.html", recipes=recipes)
+
+
 @app.route("/get_recipes")
 def get_recipes():
     recipes = mongo.db.recipes.find()
@@ -114,7 +121,7 @@ def edit_recipes(recipes_id):
 @app.route("/delete_task/<recipes_id>")
 def delete_recipes(recipes_id):
     mongo.db.recipes.delete_one({"_id": ObjectId(recipes_id)})
-    flash("Task Successfully removed")
+    flash("Task Successfully removed, add another?")
     return render_template("add_recipe.html")
 
 
