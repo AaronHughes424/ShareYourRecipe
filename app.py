@@ -85,17 +85,37 @@ def profile(username):
 
     if session["user"]:
         recipes = mongo.db.recipes.find({"created_by": username})
-        return render_template("profile.html", username=username, recipes=recipes)
+        return render_template(
+            "profile.html", username=username, recipes=recipes)
 
     return redirect(url_for("login"))
 
 
 @app.route("/edit_recipes/<recipes_id>", methods=["GET", "POST"])
 def edit_recipes(recipes_id):
-    recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
+    if request.method == "POST":
+        edit_recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe_title": request.form.get("recipe_title"),
+            "recipe_ingredients": request.form.get("recipe_ingredients"),
+            "recipe_method": request.form.get("recipe_method"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.replace_one(
+            {"_id": ObjectId(recipes_id)}, edit_recipe)
+        flash("Recipe Updated Successfully")
 
+    recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_recipes.html", recipes=recipes, categories=categories)
+    return render_template(
+        "edit_recipes.html", recipes=recipes, categories=categories)
+
+
+@app.route("/delete_task/<recipes_id>")
+def delete_recipes(recipes_id):
+    mongo.db.recipes.delete_one({"_id": ObjectId(recipes_id)})
+    flash("Task Successfully removed")
+    return render_template("add_recipe.html")
 
 
 @app.route("/logout")
