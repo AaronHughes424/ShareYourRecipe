@@ -90,6 +90,14 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route("/edit_recipes/<recipes_id>", methods=["GET", "POST"])
+def edit_recipes(recipes_id):
+    recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_recipes.html", recipes=recipes, categories=categories)
+
+
 @app.route("/logout")
 def logout():
     flash("You have been logged out")
