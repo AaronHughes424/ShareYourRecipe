@@ -76,7 +76,7 @@ It provides a database of recipes which can be searched, viewed, added to, remov
 ## <a name="skeleton"></a> Skeleton
 Please click the below link to view the wireframe mock up of the website in mobile, tablet and desktop sizing
 
-[Wireframe]()
+[Wireframe](https://github.com/AaronHughes424/ShareYourRecipe/tree/main/static/wireframes)
 
 ## <a name="surface"></a> Surface
 The intention of the website is to be clean, crisp and clear
@@ -210,7 +210,7 @@ echo web: python app.py > Procfile
 |PORT|`5000`|
 |SECRET_KEY|`<app secret key>`|
 |MONGO_URI|`mongodb+srv://aaronhughes424:Jackson22@recipeshare.ul2rr.mongodb.net/recipe_share?retryWrites=true&w=majority`
-|MONGO_DBNAME|`recipe_nation`|
+|MONGO_DBNAME|`recipe_share`|
 
 10. Go back to the **Deploy** tab and under **Automatic deploys** choose **Enable Automatic Deploys**
 11. Under **Manual deploy**, select **master** and click **Deploy Branch**
@@ -230,9 +230,15 @@ The Code Institute:
 
 Providing an indepth walkthrough of User Validation via materialize.css
 
+Hero Image taken from:
+
+https://unsplash.com/s/photos/cooking
+
 ## <a name="acks"></a> Acknowledgements
 
 * My mentor Antonio Rodriguez who has provided me with guidance and support through the project
 
 * My friends and family who helped to test the site and to add recipes
+
+* Code institue slack who provided a fix for the updated mongoDB methods.
     
