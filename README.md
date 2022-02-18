@@ -10,7 +10,6 @@
     1. [Surface](#surface)
 1. [Features](#features)
     1. [Existing Features](#existing-features)
-    1. [Features left to implement](#left-to)
 1. [Bugs](#bugs)
 1. [Technologies used](#tech)
 1. [Testing](#testing)
@@ -58,9 +57,6 @@ It provides a database of recipes which can be searched, viewed, added to, remov
 * A background image which would be pleasing to have througout the site.
 * Clear, crisp colours which do not detract from or make the text unreadable
 
-### For usability
-* For the time commitment to be clear as this is often a factor in a recipe choice
-
 ## <a name="structure"></a> Structure
 **Interaction design:**
 * User friendly interface to ensure usability and to encourage the user to return
@@ -74,7 +70,7 @@ It provides a database of recipes which can be searched, viewed, added to, remov
 * All information is appropriate and relative to the subject and not misleading or hard to find
 
 ## <a name="skeleton"></a> Skeleton
-Please click the below link to view the wireframe mock up of the website in mobile, tablet and desktop sizing
+Please click the below link to view the wireframe mock up of the website in mobile and desktop sizing
 
 [Wireframe](https://github.com/AaronHughes424/ShareYourRecipe/tree/main/static/wireframes)
 
@@ -99,7 +95,7 @@ Search function | The users are able to search the recipe database by ingredient
 Bug | Fix
 --------|--------
 
-* Issue with heroku deployment|When posting the MongoDB URI from the env.py file there was a line break which wouldn't allow heroku to launch app.
+* Issue with heroku deployment|When posting the MongoDB URI from the env.py file there was a line break which wouldn't allow heroku to launch app. This was removed and resolved issue.
 
 # <a name="tech"></a> Technologies Used
 * Materialize - https://materializecss.com/
