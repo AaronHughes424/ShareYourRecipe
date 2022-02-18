@@ -214,7 +214,7 @@ echo web: python app.py > Procfile
 
 # <a name="credits"></a> Credits
 ## <a name="content"></a> Content
-All of the recipes and images added under the username 'aaronhughes' were sourced from https://www.bbcgoodfood.com
+All of the recipes added under the username 'aaronhughes' were sourced from https://www.bbcgoodfood.com
 https://www.bbcgoodfood.com/recipes/shortbread-biscuits
 https://www.bbcgoodfood.com/recipes/yummy-golden-syrup-flapjacks
 https://www.bbcgoodfood.com/recipes/chocolate-fudge-cake
